@@ -53,3 +53,10 @@ body {
 #inputPassword{
   margin-left: 28px;
 }
+
+#btn{
+  color: var(--white);
+  background-color: aquamarine;
+  box-shadow: var(--shadow-2);
+  margin-top: 20px;
+}

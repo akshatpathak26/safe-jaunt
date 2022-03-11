@@ -1,36 +1,30 @@
+const connectDB =require('./db/connect')
+const express = require('express')
+const app = express();
+const tasks = require('./routes/tasks')
 require('dotenv').config()
 
-const express = require('express')
-const app = express()
-
-const notFoundMiddleware = require('./middleware/not-found')
-const errorMiddleware = require('./middleware/error-handler')
-const { route } = require('express/lib/router')
-
 //middleware
-app.use(express.json())
 app.use(express.static('./public'))
+app.use(express.json())
+//routes
 
-app.get('/',(req,res)=>{
-    res.send('<h1>SAFE JAUNT </h1> <a href="api/safe-jaunt">route your route</a>')
-})
-  //  res.sendFile(path.join(__dirname, "../public/login.png"));
+app.use('/',tasks)
 
-//products route
+const port = 3000
 
 
-app.use(notFoundMiddleware)
-app.use(errorMiddleware)
-
-const port = process.env.PORT || 8080
-
-const start = async () =>{
+const start = async () => {
     try {
-        //connent to db
-        app.listen(port,console.log('server is listening to the port 8080'))
-    } catch (error) {
-        
+        await connectDB(process.env.MONGO_URI)
+        app.listen(port,console.log(`the server is listening to ${port}`))
     }
-}
+  
+  catch (error) {
+        console.log(error);
+    }
+} 
 
 start()
+
+//mongodb+srv://akshatpathak08:akshatpathak26@nodeexpressproject.l3ofz.mongodb.net/sampathiDB?retryWrites=true&w=majority
