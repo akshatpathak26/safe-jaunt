@@ -9,10 +9,13 @@ const { route } = require('express/lib/router')
 
 //middleware
 app.use(express.json())
+app.use(express.static('./public'))
 
 app.get('/',(req,res)=>{
     res.send('<h1>SAFE JAUNT </h1> <a href="api/safe-jaunt">route your route</a>')
 })
+  //  res.sendFile(path.join(__dirname, "../public/login.png"));
+
 //products route
 
 
