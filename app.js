@@ -27,4 +27,3 @@ const start = async () => {
 
 start()
 
-//mongodb+srv://akshatpathak08:akshatpathak26@nodeexpressproject.l3ofz.mongodb.net/sampathiDB?retryWrites=true&w=majority

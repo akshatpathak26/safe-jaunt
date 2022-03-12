@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sampati</title>
 
-    
-    <link rel="stylesheet" href="./style.css">
- 
-  </head>
-  <body>
-<div class="Slots_form">  
-   <form action="/" method="post">
-     <h4>Slot Booking</h4>
-<label>Full Name:</label>
-<input type="text" name="fullname">
-<label>Time</label>
-<input type="text" name="time">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sampati</title>
 
-<label>Pickup</label>
-<select id="pickup" name="pickup">
-  <option></option>
-  <option value="nimbus">nimbus</option>
-  <option value="pari_Chowk">pari Chowk</option>
-  <option value="Acher">Acher</option>
-</select>
-<label>Destination</label>
-<select id="destination" name="destination">
-  <option></option>
-  <option value="Galgotia_University">Galgotia University</option>
-  <option value="NIU">NIU</option>
-  <option value="Sharda">Sharda</option>
-</select>
 
-<label>Contact no.</label>
-<input type="text" name="contact">
-<input type="submit" value="Submit" name="submit">
-   </form>
+  <link rel="stylesheet" type="text/css" href="/styles.css">
+
+</head>
+
+<body class="slot">
+  <div class="Slots_form">
+    <form action="/slot/token" method="post">
+      <h4>Slot Booking</h4>
+      <label>Full Name:</label>
+      <input type="text" name="fullname">
+      <label>Time</label>
+      <input type="text" name="time">
+
+      <label>Pickup</label>
+      <select id="pickup" name="pickup">
+        <option></option>
+        <option value="nimbus">nimbus</option>
+        <option value="pari_Chowk">pari Chowk</option>
+        <option value="Acher">Acher</option>
+      </select>
+      <label>Destination</label>
+      <select id="destination" name="destination">
+        <option></option>
+        <option value="Galgotia_University">Galgotia University</option>
+        <option value="NIU">NIU</option>
+        <option value="Sharda">Sharda</option>
+      </select>
+
+      <label>Contact no.</label>
+      <input type="text" name="contact">
+      <input type="submit" value="Submit" name="submit">
+    </form>
   </div>
 
-  </body>
+</body>
+
 </html>
