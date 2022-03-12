@@ -168,3 +168,27 @@ body {
       input[type=submit]:hover {
         background-color: #45a049;
       }
+
+      .image{
+        border-radius: 50%;
+        height: 50px;
+        float: left;
+      }
+      .Username{
+        float:left;
+        padding-top: 15px;
+        padding-left: 5px;
+      }
+      .time{
+        float:right;
+      }
+      .card-body{
+        text-align: left;
+      }
+      .btm-join{
+        float: right;
+      }
+      .size{
+        height: 160px;
+        width:  600px;
+      }

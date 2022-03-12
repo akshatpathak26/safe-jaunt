@@ -8,7 +8,7 @@ const home = (req,res)=>{
    
 const createUser =  (req,res) =>{
    // const task = Task.create({email:req.body.email,password:req.body.password})
-   const task = Task.create(req.body)
+   //const task = Task.create(req.body)
     res.redirect('/slot')
     }
 
